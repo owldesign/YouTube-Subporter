@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Subporter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">YouTube Subporter</h1>
+      <p class="subtitle">Export & Import Subscriptions</p>
+    </header>
+
+    <!-- Main Actions -->
+    <main class="main-content">
+      <!-- Export Section -->
+      <section class="action-section">
+        <div class="section-header">
+          <span class="icon">📤</span>
+          <h2>Export Subscriptions</h2>
+        </div>
+        <p class="section-description">Extract your subscriptions as a JSON file</p>
+        <button id="exportBtn" class="btn btn-primary">
+          <span class="btn-text">Export to JSON</span>
+        </button>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Import Section -->
+      <section class="action-section">
+        <div class="section-header">
+          <span class="icon">📥</span>
+          <h2>Import Subscriptions</h2>
+        </div>
+        <p class="section-description">Upload a JSON file to subscribe to channels</p>
+        <input type="file" id="fileInput" accept=".json" style="display: none;">
+        <button id="importBtn" class="btn btn-primary">
+          <span class="btn-text">Choose JSON File</span>
+        </button>
+        <div id="fileInfo" class="file-info hidden"></div>
+        <button id="startImportBtn" class="btn btn-success hidden">
+          <span class="btn-text">Start Import</span>
+        </button>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Compare/Filter/Merge Section -->
+      <section class="action-section">
+        <div class="section-header">
+          <span class="icon">🔍</span>
+          <h2>Advanced Tools</h2>
+        </div>
+        <div class="advanced-buttons">
+          <button id="compareBtn" class="btn btn-secondary">Compare</button>
+          <button id="filterBtn" class="btn btn-secondary">Filter</button>
+          <button id="mergeBtn" class="btn btn-secondary">Merge</button>
+        </div>
+      </section>
+
+      <!-- Settings Section -->
+      <section class="settings-section">
+        <button id="settingsToggle" class="settings-toggle">
+          <span>⚙️ Settings</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        <div id="settingsPanel" class="settings-panel hidden">
+          <div class="setting-item">
+            <label for="delaySlider">Delay between subscriptions (seconds)</label>
+            <div class="slider-group">
+              <input type="range" id="delaySlider" min="1" max="10" value="3" step="0.5">
+              <span id="delayValue" class="slider-value">3s</span>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label for="batchSizeSlider">Batch size (channels)</label>
+            <div class="slider-group">
+              <input type="range" id="batchSizeSlider" min="5" max="50" value="10" step="5">
+              <span id="batchSizeValue" class="slider-value">10</span>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label for="batchPauseSlider">Pause between batches (seconds)</label>
+            <div class="slider-group">
+              <input type="range" id="batchPauseSlider" min="5" max="30" value="10" step="5">
+              <span id="batchPauseValue" class="slider-value">10s</span>
+            </div>
+          </div>
+          <button id="saveSettingsBtn" class="btn btn-small">Save Settings</button>
+        </div>
+      </section>
+
+      <!-- Progress Section -->
+      <section id="progressSection" class="progress-section hidden">
+        <h3>Progress</h3>
+        <div class="progress-bar-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="progressText" class="progress-text">0 / 0</p>
+        <p id="currentChannel" class="current-channel"></p>
+
+        <div class="stats-grid">
+          <div class="stat-item stat-success">
+            <span class="stat-label">Succeeded</span>
+            <span id="successCount" class="stat-value">0</span>
+          </div>
+          <div class="stat-item stat-failed">
+            <span class="stat-label">Failed</span>
+            <span id="failedCount" class="stat-value">0</span>
+          </div>
+          <div class="stat-item stat-skipped">
+            <span class="stat-label">Skipped</span>
+            <span id="skippedCount" class="stat-value">0</span>
+          </div>
+        </div>
+
+        <div class="progress-controls">
+          <button id="pauseBtn" class="btn btn-warning">Pause</button>
+          <button id="resumeBtn" class="btn btn-success hidden">Resume</button>
+          <button id="cancelBtn" class="btn btn-danger">Cancel</button>
+        </div>
+      </section>
+
+      <!-- Status Messages -->
+      <div id="statusMessage" class="status-message hidden"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">Privacy-focused • No data collection • Open source</p>
+      <p class="footer-author">
+        Created by <a href="https://github.com/owldesign" target="_blank" rel="noopener">owldesign</a> •
+        <a href="https://github.com/owldesign/YouTube-Subporter" target="_blank" rel="noopener">View on GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
