@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small Promo Tile - 440x280</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .promo-tile {
+      width: 440px;
+      height: 280px;
+      background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .promo-tile::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .tagline {
+      color: rgba(255, 255, 255, 0.95);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .features {
+      display: flex;
+      gap: 16px;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .checkmark {
+      width: 16px;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    .instructions {
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      max-width: 440px;
+    }
+
+    .instructions h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .instructions ol {
+      margin-left: 20px;
+      color: #666;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="promo-tile">
+      <div class="icon"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path d="M128,19.2L128,108.8C128,119.397 119.397,128 108.8,128L19.2,128C8.603,128 0,119.397 0,108.8L0,19.2C0,8.603 8.603,0 19.2,0L108.8,0C119.397,0 128,8.603 128,19.2Z" style="fill:rgb(255,0,0);"/>
+          <path d="M108.8,29.952L108.8,98.048C108.8,103.982 103.982,108.8 98.048,108.8L29.952,108.8C24.018,108.8 19.2,103.982 19.2,98.048L19.2,29.952C19.2,24.018 24.018,19.2 29.952,19.2L98.048,19.2C103.982,19.2 108.8,24.018 108.8,29.952Z" style="fill:white;"/>
+          <g transform="matrix(1,0,0,1,64,64)">
+        <g transform="matrix(-1,-0,0,-1,6,-12.52)">
+            <path d="M-13.44,-22.4L-13.44,8.96L-22.4,8.96L0,26.88L22.4,8.96L13.44,8.96L13.44,-22.4L-13.44,-22.4Z" style="fill:rgb(255,0,0);fill-opacity:0.5;fill-rule:nonzero;"/>
+        </g>
+            <g transform="matrix(1,0,0,1,-7,12)">
+            <path d="M-13.44,-22.4L-13.44,8.96L-22.4,8.96L0,26.88L22.4,8.96L13.44,8.96L13.44,-22.4L-13.44,-22.4Z" style="fill:rgb(255,0,0);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
+      </div>
+      <h1>YouTube Subporter</h1>
+      <div class="tagline">Export & Import Your Subscriptions</div>
+      <div class="features">
+        <div class="feature">
+          <span class="checkmark">✓</span>
+          <span>No API</span>
+        </div>
+        <div class="feature">
+          <span class="checkmark">✓</span>
+          <span>Privacy-Focused</span>
+        </div>
+        <div class="feature">
+          <span class="checkmark">✓</span>
+          <span>Free & Open</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>📸 How to Capture:</h3>
+      <ol>
+        <li>Use browser's built-in screenshot tool (Cmd/Ctrl + Shift + P, type "screenshot")</li>
+        <li>Or use macOS Screenshot (Cmd + Shift + 4)</li>
+        <li>Capture only the red tile (440x280 area)</li>
+        <li>Save as PNG</li>
+      </ol>
+      <p style="margin-top: 15px; color: #999; font-size: 12px;">
+        <strong>Tip:</strong> Use browser developer tools to set exact viewport: 440x280
+      </p>
+    </div>
+  </div>
+</body>
+</html>
