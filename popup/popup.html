@@ -127,6 +127,120 @@
 
       <!-- Status Messages -->
       <div id="statusMessage" class="status-message hidden"></div>
+
+      <!-- Compare Modal -->
+      <div id="compareModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Compare Subscription Lists</h3>
+            <button id="closeCompareModal" class="modal-close">×</button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-description">Upload two export files to see the differences</p>
+
+            <div class="file-upload-group">
+              <label class="file-label">File 1:</label>
+              <input type="file" id="compareFile1" accept=".json" class="file-input-small">
+              <span id="compareFile1Name" class="file-name">No file selected</span>
+            </div>
+
+            <div class="file-upload-group">
+              <label class="file-label">File 2:</label>
+              <input type="file" id="compareFile2" accept=".json" class="file-input-small">
+              <span id="compareFile2Name" class="file-name">No file selected</span>
+            </div>
+
+            <button id="startCompareBtn" class="btn btn-primary" disabled>Compare</button>
+
+            <div id="compareResults" class="compare-results hidden">
+              <h4>Comparison Results</h4>
+              <div class="compare-stats">
+                <div class="compare-stat">
+                  <span class="stat-label">Only in File 1:</span>
+                  <span id="compareOnlyFile1" class="stat-value">0</span>
+                </div>
+                <div class="compare-stat">
+                  <span class="stat-label">Only in File 2:</span>
+                  <span id="compareOnlyFile2" class="stat-value">0</span>
+                </div>
+                <div class="compare-stat">
+                  <span class="stat-label">In Both:</span>
+                  <span id="compareBoth" class="stat-value">0</span>
+                </div>
+              </div>
+              <button id="exportDiffBtn" class="btn btn-secondary">Export Differences</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Modal -->
+      <div id="filterModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Filter Subscriptions</h3>
+            <button id="closeFilterModal" class="modal-close">×</button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-description">Filter channels before importing</p>
+
+            <div class="filter-group">
+              <label for="filterKeyword">Filter by keyword:</label>
+              <input type="text" id="filterKeyword" placeholder="Search channel name or handle..." class="filter-input">
+            </div>
+
+            <div class="filter-group">
+              <label>Filter by subscriber count:</label>
+              <div class="filter-range">
+                <input type="number" id="filterMinSubs" placeholder="Min" class="filter-input-small">
+                <span>to</span>
+                <input type="number" id="filterMaxSubs" placeholder="Max" class="filter-input-small">
+              </div>
+            </div>
+
+            <button id="applyFilterBtn" class="btn btn-primary">Apply Filter</button>
+
+            <div id="filterResults" class="filter-results hidden">
+              <p id="filterResultText">Showing <strong id="filteredCount">0</strong> of <strong id="totalCount">0</strong> channels</p>
+              <div class="filter-actions">
+                <button id="clearFilterBtn" class="btn btn-secondary">Clear Filter</button>
+                <button id="importFilteredBtn" class="btn btn-success">Import Filtered</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Merge Modal -->
+      <div id="mergeModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Merge Subscription Lists</h3>
+            <button id="closeMergeModal" class="modal-close">×</button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-description">Combine multiple export files into one</p>
+
+            <div class="file-upload-group">
+              <label class="file-label">Select files:</label>
+              <input type="file" id="mergeFiles" accept=".json" multiple class="file-input-small">
+              <span id="mergeFilesCount" class="file-name">No files selected</span>
+            </div>
+
+            <button id="startMergeBtn" class="btn btn-primary" disabled>Merge Files</button>
+
+            <div id="mergeResults" class="merge-results hidden">
+              <h4>Merge Results</h4>
+              <p>Total unique channels: <strong id="mergeTotal">0</strong></p>
+              <p>Duplicates removed: <strong id="mergeDuplicates">0</strong></p>
+              <div class="merge-actions">
+                <button id="exportMergedBtn" class="btn btn-secondary">Export Merged</button>
+                <button id="importMergedBtn" class="btn btn-success">Import Merged</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
