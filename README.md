@@ -12,9 +12,9 @@ YouTube Subporter is a Chrome extension that allows you to easily export your Yo
 - ✅ **User-Configurable Rate Limiting** - Adjust delays to avoid YouTube rate limits
 - ✅ **Progress Tracking** - Real-time progress updates with pause/resume/cancel controls
 - ✅ **Privacy-Focused** - No data collection, no external servers, everything stays local
-- 🚧 **Compare** - Compare subscription lists between accounts (coming soon)
-- 🚧 **Filter** - Filter channels before importing (coming soon)
-- 🚧 **Merge** - Merge multiple subscription lists (coming soon)
+- ✅ **Compare** - Compare subscription lists between accounts
+- ✅ **Filter** - Filter channels before importing 
+- ✅ **Merge** - Merge multiple subscription lists
 
 ## Installation
 
